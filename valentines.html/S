@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Valentine’s Appreciation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #f8cdda, #f88fb1);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            width: 90%;
+            max-width: 420px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 12px 35px;
+            font-size: 16px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            background: #ff4f7b;
+            color: #fff;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #ff2f64;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .flowers {
+            font-size: 48px;
+            margin: 20px 0;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 15px;
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        footer {
+            margin-top: 15px;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- First Interface -->
+    <div id="welcome">
+        <h1>Happy Valentine’s Day 💖</h1>
+        <p>
+            A small gesture made with appreciation,  
+            warmth, and gratitude.
+        </p>
+        <button onclick="openGift()">Open</button>
+    </div>
+
+    <!-- Second Interface -->
+    <div id="gift" class="hidden">
+        <h1>For Someone Special 🌷</h1>
+
+        <div class="flowers">
+            💐 🌹 🌸 🌺 🌷
+        </div>
+
+        <div class="message">
+            <p>
+                Thank you for being someone who brings kindness,  
+                inspiration, and positivity into my life.  
+                Your presence is truly appreciated more than words can express.
+            </p>
+            <p>
+                This Valentine’s Day is a reminder of how meaningful  
+                genuine connection and gratitude truly are.
+            </p>
+        </div>
+
+        <footer>
+            With appreciation 💝
+        </footer>
+    </div>
+
+</div>
+
+<script>
+    function openGift() {
+        document.getElementById("welcome").classList.add("hidden");
+        document.getElementById("gift").classList.remove("hidden");
+    }
+</script>
+
+</body>
+</html>
